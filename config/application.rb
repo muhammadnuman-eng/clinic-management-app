@@ -23,6 +23,9 @@ module ClinicApi
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 8.0
 
+    # Set secret_key_base for production
+    config.secret_key_base = ENV['SECRET_KEY_BASE'] || 'rLROSTe4TOZ8CMb/91N/55hM1tauGtDILsRLSH0woVg='
+
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
     # Common ones are `templates`, `generators`, or `middleware`, for example.

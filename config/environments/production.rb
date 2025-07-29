@@ -3,6 +3,9 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # Set secret_key_base from environment variable if credentials are not available
+  config.secret_key_base = ENV['SECRET_KEY_BASE'] || 'rLROSTe4TOZ8CMb/91N/55hM1tauGtDILsRLSH0woVg='
+
   # Code is not reloaded between requests.
   config.enable_reloading = false
 

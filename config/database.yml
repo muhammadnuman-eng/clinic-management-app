@@ -79,9 +79,8 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  primary:
-    <<: *default
-    url: <%= ENV['DATABASE_URL'] %>
-  queue:
-    <<: *default
-    url: <%= ENV['DATABASE_URL'] %>
+  <<: *default
+  url: postgresql://postgres:aKwbrwRebTTKyhDQvucyMTsIdiURfhru@trolley.proxy.rlwy.net:11511/railway
+  # queue:
+  #   <<: *default
+  #   url: <%= ENV['DATABASE_URL'] %>

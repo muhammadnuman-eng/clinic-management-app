@@ -43,3 +43,5 @@
 *.bak
 .idea/
 .vscode/
+
+/config/credentials/production.key
